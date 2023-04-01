@@ -1,7 +1,7 @@
-const fs = require('fs/promises');
-const path = require('path');
-const contactsPath = path.join(__dirname, './db/contacts.json');
-const { nanoid } = require('nanoid');
+const fs = require("fs/promises");
+const path = require("path");
+const contactsPath = path.join(__dirname, "./db/contacts.json");
+const { nanoid } = require("./node_modules/nanoid");
 
 const updateContacts = async (contacts) =>
   fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
